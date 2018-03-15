@@ -1,8 +1,9 @@
+require('dotenv').config()
 const { RTMClient } = require('@slack/client');
 // const { CLIENT_EVENTS } = require('@slack/client');
 // // var RtmClient = require('@slack/client').RtmClient;
 // var CLIENT_EVENTS = require('@slack/client').CLIENT_EVENTS;
-var rtm = new RTMClient(env.TOKEN);
+var rtm = new RTMClient(process.env.SLACK_TOKEN);
 rtm.start();
 
 // This argument can be a channel ID, a DM ID, a MPDM ID, or a group ID
